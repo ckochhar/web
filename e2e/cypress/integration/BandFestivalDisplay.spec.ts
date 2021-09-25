@@ -1,4 +1,4 @@
-
+import { FestivalBand } from "../core/models/festival.model";
 const expectedData = [
     'Adrian Venti Trainerella', 'Auditones Twisted Tour', 'Critter Girls', 'Frank Jupiter LOL-palooza', 'Green Mild Cold Capsicum Small Night In',
     'Jill Black LOL-palooza', 'Manish Ditch Trainerella', 'Propeller', 'Squint-281 Small Night In', 'Squint-281 Twisted Tour', 'Summon Twisted Tour',
@@ -42,6 +42,8 @@ describe('Display Festivals', () => {
         }).then(response => {
             assert.equal(response.status, 200);
             assert.isTrue(JSON.stringify(response.body).trim().includes('Auditones'));
+            var castedResponse = response.body as FestivalBand[];
+            assert.isNotNull(castedResponse,"Festivals Get call has returned invalid response");
         });
     });
 
