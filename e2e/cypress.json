@@ -1,0 +1,7 @@
+{
+    "baseUrl":"http://localhost:4200/festivals",
+
+"env":{
+    "apiUrl": "https://eacp.energyaustralia.com.au/codingtest/api/v1/festivals"
+}
+}
