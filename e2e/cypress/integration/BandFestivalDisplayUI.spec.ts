@@ -49,9 +49,7 @@ describe('Display Festivals', () => {
     //observed if i run it about 20 times, a few calls fail. So i am going on that assumption but in real life, number of calls in set time can be worked out accordingly.
     //and test could be much easier like make 5 calls with 1 sec interval and 6th call should bef 429. that ll be more concrete test then this below
     it('03_Throttled Error should be returned, When number of allowed calls in set limit is breached', () => {
-        // const url = 'https://eacp.energyaustralia.com.au/codingtest/api/v1/festivals';
         let iteration = Array.from(Array(20).keys());
-
         const accum = (cmds) => {
             const results = []
             cmds.forEach(() => {
